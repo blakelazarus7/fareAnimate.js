@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const el = document.getElementById("changing-word");
   if (!el) return;
 
+  el.style.transition = "opacity 0.3s ease";
+
   setInterval(() => {
     el.style.opacity = 0;
 
@@ -15,3 +17,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 300);
   }, 2000);
 });
+
