@@ -1,7 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+function startWordRotation() {
   const words = ["clean", "toxin-free", "organic", "regenerative"];
   let i = 0;
-
   const el = document.getElementById("changing-word");
   if (!el) return;
 
@@ -16,5 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
       el.style.opacity = 1;
     }, 300);
   }, 2000);
-});
+}
 
+// Use this to ensure DOM is loaded in Replo
+window.requestAnimationFrame(() => {
+  setTimeout(startWordRotation, 100); // slight delay to be safe
+});
